@@ -1,13 +1,13 @@
 package DVDPlayer;
 
-class DVDPlayer {
+public class DVDPlayer {
 
-	boolean canRecord = false;
+	public boolean canRecord = false;
 
-	void recordDVD() {
+	public void recordDVD() {
 		System.out.println("идёт запись DVD");
 		}
-	void playDVD() {
+	public void playDVD() {
 		System.out.println("DVD проигрывается");
 	}
 }

@@ -12,16 +12,16 @@ public class DotCom {
 
     public String checkYourself(String userInput)
     {
-        String result = "miss";
+        String result = "Мимо";
         int index = locationCells.indexOf(userInput);
         if (index >= 0) {
             locationCells.remove(index);
             if (locationCells.isEmpty()) {
-                result = "kill";
+                result = "Потопил";
             }
             else
             {
-                result = "hit";
+                result = "Попал";
             }
         }
         return result;

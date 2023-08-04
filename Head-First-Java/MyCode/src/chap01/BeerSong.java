@@ -9,10 +9,10 @@ public class BeerSong {
 			System.out.println("Возьми одну.");
 			System.out.println("Пусти по кругу.");
 			System.out.println();
+			beerNum = beerNum - 1;
 			if (beerNum == 1) {
 				word = "бутылка"; // в единственном числе - ОДНА бутылка.
 			}
-			beerNum = beerNum - 1;
 
 			if (beerNum > 0) {
 				System.out.println(beerNum + " " + word + " пива на стене");

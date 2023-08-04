@@ -2,6 +2,8 @@ package chap06;
 
 import java.util.*;
 
+import static java.lang.reflect.Array.get;
+
 public class DotComBust {
     private GameHelper helper = new GameHelper();
     private ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
@@ -18,9 +20,9 @@ public class DotComBust {
         dotComsList.add(two);
         dotComsList.add(three);
 
-        System.out.println("Your goal is to sink three dot coms.");
+        System.out.println("Ваша цель - потопить три \"сайта\"");
         System.out.println("Pets.com, eToys.com, Go2.com");
-        System.out.println("Try to sink them all in the fewest number of guesses");
+        System.out.println("Попытайтесь потопить их за минимальное количество ходов");
 
         for (DotCom dotComSet : dotComsList) {
             ArrayList<String> newLocation = helper.placeDotCom(3);
@@ -39,16 +41,16 @@ public class DotComBust {
     private void checkUserGuess(String userGuess)
     {
         numOfGuesses++;
-        String result = "miss";
+        String result = "Мимо";
 
         for (DotCom dotComToTest : dotComsList)
         {
             result = dotComToTest.checkYourself(userGuess);
-            if (result.equals("hit"))
+            if (result.equals("Попал"))
             {
                 break;
             }
-            if (result.equals("kill"))
+            if (result.equals("Потопил"))
             {
                 dotComsList.remove(dotComToTest);
                 break;

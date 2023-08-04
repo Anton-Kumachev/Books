@@ -20,6 +20,9 @@ public class ArrayListMagnet {
             a.add(4, "4.2");
         }
         printAL(a);
+        if (a.contains("два")) {
+            a.add("2.2");
+        }
         printAL(a);
     }
 
